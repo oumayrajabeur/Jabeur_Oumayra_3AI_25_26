@@ -1,15 +1,15 @@
 def ricercaDicotomica(l, n):
     i = 0
     f = len(l)-1
-    while i != f or l[m]==n:  
+    while i <= f:  
         m = (i+f)//2
         print(i, m, f)
         if l[m] == n:
             return True
-        if l[m] > n:
-            f=m
-        elif l[m] < n:
-            i = m
+        elif l[m] > n:
+            f=m - 1
+        else:
+            i = m + 1
     return False
  
  
